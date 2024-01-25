@@ -1,7 +1,11 @@
 
-# Description: Using Logistic Regression and KNN wo classify particles as noise or signals based on a few attributes.  
+# Description:  
+Using PCA to reduce the dimensionality of the dataset and then using KNN to classify the images. The dataset used was AT&T Faces dataset. the problem we are solving is face recognition and detection  
 
-## Approach:  
 
-   Preprocessing: the dataset is not balanced due to technical reasons, so we need to balance it before training the models to avoid biases. So undersampling was used to resample the more dominant class. Also, the features had wildly different ranges to all features were normalized to assure they all converge easily.  
-   Training: Logistic Regression and KNN (with diffrent K values) were used to solve this problem and their performances where compared. The models were trained using 10-fold cross validation and the best model was selected based on the average accuracy of the folds.
+## Approach:
+
+PCA algorithm was coded manually from scratch and applied on the Dataset with a different alphas. Then KNN was used to classify the images.   
+The models were trained using 10-fold cross validation and the best model was selected based on the average accuracy of the folds.   
+the performance was compared between different alphas and different K values. then the models were compared to the built in PCA functions in sklearn to assure the correctness of the implementation.  
+Then images from the CIFAR-10 dataset were added ad the non-face images and KNN was used again this time to detect weather there was a face or not in the image.
